@@ -45,6 +45,10 @@ body{
 	width: 22%;
     padding: 10px 10px 10px 10px;
 }
+#heading{
+	font: monospace;
+	size: 12px;
+}
 
 	</style>
 
@@ -61,39 +65,8 @@ body{
 
 
 </head>
-<?php
-$servername = "127.0.0.1";
-$username = "root";
-$password = "";
-$dbname = "bloom";
 
-// Create connection
-$conn = mysqli_connect($servername, $username, $password,$dbname);
-
-// Check connection
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
-$sql = "SELECT * FROM story";
-$result = $conn->query($sql);
-
-
-if ($result->num_rows > 0) {
-    // output data of each row
-    while($row = $result->fetch_assoc()) {
-
-    	?>
-    	<?php
-        echo "id: " . $row["s_no."]. " - Name: " . $row["s_name"]. " " .nl2br( $row["s_intro"]). "<br>";
-    }
-} else {
-    echo "0 results";
-}
-$conn->close();
-
-
-
-?>
+<?php include('inc/datatemp.php');?>
 
 
 <body>
@@ -128,10 +101,21 @@ $conn->close();
 	<div id="s1">
 		<div class="card" id="s">
   <img src="img/download.jpeg" alt="Avatar" style="width:100%">
-  <div class="container">
+   <div class="container">
+    <?php
+
+$sql = "select * from story where s_no = 1 ";
+$result = $conn->query($sql);
 
 
-
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        echo "<span id=\"heading\">" . $row["s_no"]. ". " . $row["s_name"]. "</span> <br><hr width=\"25%\" align=\"left\">";
+         echo nl2br($row["s_intro"]);
+}
+  }
+  ?>
   </div>
 </div>
 
@@ -140,10 +124,23 @@ $conn->close();
 	<div id="s2">
 		<div class="card" id="s">
   <img src="img/download.jpeg" alt="Avatar" style="width:100%">
-  <div class="container">
-    <h4><b>M. April Bloom</b></h4> 
-    <p>data to be id</p> 
+   <div class="container">
+    <?php
+
+$sql = "select * from story where s_no = 2 ";
+$result = $conn->query($sql);
+
+
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        echo "<span id=\"heading\">" . $row["s_no"]. ". " . $row["s_name"]. "</span> <br><hr width=\"25%\" align=\"left\">";
+         echo nl2br($row["s_intro"]);
+}
+}  ?>
   </div>
+
+
 </div>
 
 	</div>
@@ -152,9 +149,26 @@ $conn->close();
 		<div class="card" id="s">
   <img src="img/download.jpeg" alt="Avatar" style="width:100%">
   <div class="container">
-    <h4><b>M. April Bloom</b></h4> 
-    <p>data to be id</p> 
+    <?php
+
+$sql = "select * from story where s_no = 3 ";
+$result = $conn->query($sql);
+
+
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        echo "<span id=\"heading\">" . $row["s_no"]. ". " . $row["s_name"]. "</span> <br><hr width=\"25%\" align=\"left\">";
+         echo nl2br($row["s_intro"]);
+}
+  }
+  ?>
   </div>
+
+
+
+
+
 </div>
 
 	</div>
@@ -162,10 +176,24 @@ $conn->close();
 	<div id="s4">
 		<div class="card" id="s">
   <img src="img/download.jpeg" alt="Avatar" style="width:100%">
-  <div class="container">
-    <h4><b>M. April Bloom</b></h4> 
-    <p>data to be id</p> 
+ <div class="container">
+    <?php
+
+$sql = "select * from story where s_no = 4 ";
+$result = $conn->query($sql);
+
+
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        echo "<span id=\"heading\">" . $row["s_no"]. ". " . $row["s_name"]. "</span> <br><hr width=\"25%\" align=\"left\">";
+         echo nl2br($row["s_intro"]);
+}
+  }
+  ?>
   </div>
+
+<?php $conn->close(); ?>
 </div>
 
 	</div>

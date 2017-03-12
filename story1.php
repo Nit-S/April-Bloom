@@ -37,6 +37,7 @@ hr{
 		
 	</script>
 </head>
+<?php include('inc/datatemp.php'); ?>
 <body>
 
 <div class="container">
@@ -54,7 +55,20 @@ hr{
 <div class="row">
 
 <div class="card" id="story">
-story:
+    <?php
+
+$sql = "select * from nlmg where s_no = 1 ";
+$result = $conn->query($sql);
+
+
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        echo "<span id=\"heading\">" . $row["s_no"]. ". " . $row["s_name"]. "</span> <br><hr width=\"25%\" align=\"left\">";
+         echo nl2br($row["s_intro"]);
+}
+  }
+  ?>
 <hr>
 A/N:
 </div>
