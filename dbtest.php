@@ -25,7 +25,16 @@ if ($result->num_rows > 0) {
 }
   }
   $conn->close();
-
+  $a=1;
+ switch ($a) {
+ 	case 1:  header('Location: http://localhost/15march/story1-view.php?val=32');
+ 		# code...
+ 		break;
+ 	
+ 	default:
+ 		# code...
+ 		break;
+ }
 ?>
 
 
