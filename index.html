@@ -42,6 +42,12 @@
 
 	
 <script>
+
+function Redirect() {
+               window.location="home.php";
+            }
+
+
 // Set the date we're counting down to
 var countDownDate = new Date("Mar 15, 2017 00:00:00").getTime();
 
@@ -67,7 +73,8 @@ var countdownfunction = setInterval(function() {
     // If the count down is over, write some text 
     if (distance < 0) {
         clearInterval(countdownfunction);
-        document.getElementById("demo").innerHTML = "EXPIRED";
+		Redirect();
+
     }
 }, 1000);
 </script>
@@ -84,7 +91,7 @@ var countdownfunction = setInterval(function() {
 	<span><p id="demo" style="
 			font-size: 30px"></p></span></div>
 <div class="bottomleft">
-	<span><p>nitigya</p></span>
+	<span><p>OLD LISTENER</p></span>
 </div>
 </div>
 </body>

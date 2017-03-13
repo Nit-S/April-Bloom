@@ -8,29 +8,7 @@
 
 	<style type="text/css">
 
-body{
-	background-color: rgb(190,190,190);
-}
 
-	/* for info and detail*/
-
-.card {
-    /* Add shadows to create the "card" effect */
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    text-align: left;
-    transition: 0.3s;
-    margin: 20px 0px 20px 40px;
-    float: left;
-    background-color: rgb(255,255,255);
-
-}
-
-/* On mouse-over, add a deeper shadow */
-.card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-
-/* Add some padding inside the card container */
 .container {
     padding: 2px 16px;
 }
@@ -68,29 +46,67 @@ body{
 
 <?php include('inc/datatemp.php');?>
 
-
+<div class="paralax">
 <body>
+<?php include('inc/header.php'); ?>
 
-<div class="jumbotron">
-<h1 align="center">M. April Bloom</h1>
-<h3 align="center">Welcome To My Story Collection</h3>
-</div>
+
 <!-- for info and details-->
 
 <div class="row">
 <div class="card" id="ID">
   <img src="img/download.jpeg" alt="Avatar" style="width:100%">
   <div class="container">
+
+
+
+
+
+
+
     <h4><b>M. April Bloom</b></h4> 
-    <p>data to be id</p> 
+    <p>further details as per authors support</p> 
+
+
+
+
+
   </div>
 </div>
 
 <div class="card" id="bio">
-  <img src="img/road.jpg" alt="Avatar" height="150px" style="width:100%">
+  <img src="img/header.jpg" alt="Avatar" height="200px" style="width:100%">
   <div class="container">
-    <h4><b>M. A Bloom</b></h4> 
-    <p>data d</p> 
+<div class="col-md-10" align="left">
+
+
+
+
+
+
+
+<br>
+    <p>I have written 4 stories for Maid Sama!, and Pride and Prejudice.</p><br>
+    <p>I have been writing for a long time now, but never thought it good enough to be exposed. So here i am fighting my fears and getting inspired by the amazing writers and their works here, in a hope to please the expectant on the other end :)</p><br>
+    <p>so, now for some trivia about me;</p><br>
+    <p>I am a girl, as obvious from my name. I have dark chocolate brown hair, which looks like they have been permed. Trust me frizz controls do not work wonders as they claim, at least not on me. I am an under-grad student with chemistry as my major subject, yup, chemistry major; i am a freak.</p><br>
+    <p>four things that i am completely crazy about:</p><br>
+    <ol>
+      <li>Pride and Prejudice (Mr. Darcy and Elizabeth(duh!))</li>
+      <li>Maid sama (Takumi, Takumi, Takumi, Takumi, and Takumi x Misaki)</li>
+      <li>Gossip girl (Chuck and Blair and their future fics)</li>
+      <li>Fifty Shades of Grey (Christian and Ana )</li>
+    </ol><br>
+    <p>Now, i know all four sets are completely opposite in personalities, but that is what being a fan is all about isn't it?</p><br>
+    <p>I have had many phases, the Harry Potter phase; Twilight phase; POTC phase; the romantic novels phase; the anime/manga phase; the TV series phase, but i just never came out of these four addictions( i guess that's the right way to put it).</p><br>
+
+
+
+
+
+
+
+</div>
   </div>
 </div>
 
@@ -99,8 +115,8 @@ body{
 <div class="row">
 	
 	<div id="s1">
-		<div class="card" id="s">
-  <img src="img/download.jpeg" alt="Avatar" style="width:100%">
+		<div class="card" id="s" onclick="window.location.href='story1-view.php?chap=1'">
+  <img src="img/nlmg.jpg" alt="Avatar" style="width:100%" height="400px">
    <div class="container">
     <?php
 
@@ -122,8 +138,8 @@ if ($result->num_rows > 0) {
 	</div>
 
 	<div id="s2">
-		<div class="card" id="s">
-  <img src="img/download.jpeg" alt="Avatar" style="width:100%">
+		<div class="card" id="s" onclick="window.location.href='story2-view.php?chap=1'">
+  <img src="img/aom.jpg" alt="Avatar" style="width:100%" height="400px">
    <div class="container">
     <?php
 
@@ -146,8 +162,8 @@ if ($result->num_rows > 0) {
 	</div>
 
 	<div id="s3">
-		<div class="card" id="s">
-  <img src="img/download.jpeg" alt="Avatar" style="width:100%">
+		<div class="card" id="s"  onclick="window.location.href='story3-view.php?chap=1'">
+  <img src="img/yam.jpg" alt="Avatar" style="width:100%" height="400px">
   <div class="container">
     <?php
 
@@ -174,8 +190,8 @@ if ($result->num_rows > 0) {
 	</div>
 
 	<div id="s4">
-		<div class="card" id="s">
-  <img src="img/download.jpeg" alt="Avatar" style="width:100%">
+		<div class="card" id="s"  onclick="window.location.href='story4-view.php?chap=1'">
+  <img src="img/sbtdb.jpg" alt="Avatar" style="width:100%" height="400px">
  <div class="container">
     <?php
 
@@ -201,6 +217,7 @@ if ($result->num_rows > 0) {
 </div>
 
 
-
+<?php include('inc/footer.php'); ?>
 </body>
+</div>
 </html>

@@ -7,9 +7,8 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<style type="text/css">
 
-body{
-	background-color: rgb(211,211,211);
-}
+
+
 hr{
 	align-self: center;
 	width: 50%;
@@ -39,11 +38,13 @@ hr{
 	</script>
 </head>
 <?php include('inc/datatemp.php'); ?>
+<?php include('inc/header.php'); ?>
+<div class="paralax">
 <body>
 
 <div class="container">
 	<div class="row" class="card">
-		<div class="col-md-3"><img src="img/download.jpeg" alt="avatar" style="width: 100%"></div>
+		<div class="col-md-3"><img src="img/sbtdb.jpg" alt="avatar" style="width: 100%"  onclick="window.location.href='home.php'"></div>
 		<div class="col-md-9">
 			<div class="card">
 			<div class="col-md-12">
@@ -106,7 +107,6 @@ if ($result->num_rows > 0) {
         <div class="col-md-5" align="right" >
 
         <div class="btn-group">
-  <button type="button" class="btn btn-primary" onclick="window.location.href=' story4-controller.php?option=1'"><< PREV</button>
   
   <div class="btn-group">
     <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">CHAPTERS<span class="caret"></span> </button>
@@ -158,7 +158,6 @@ if ($result->num_rows > 0) {
          <li><a href=" story4-controller.php?option=1">chapter 1</a></li>
       <li><a href=" story4-controller.php?option=2">chapter 2</a></li> 
     </ul>
-    <button type="button" class="btn btn-primary" onclick="window.location.href=' story4-controller.php?option=2'"> NEXT >></button>
   </div>
 </div>
 
@@ -204,7 +203,6 @@ if ($result->num_rows > 0) {
         <div class="col-md-5" align="right" >
 
         <div class="btn-group">
-  <button type="button" class="btn btn-primary" onclick="window.location.href=' story4-controller.php?option=1'"><< PREV</button>
   
   <div class="btn-group">
     <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">CHAPTERS<span class="caret"></span> </button>
@@ -253,9 +251,10 @@ if ($result->num_rows > 0) {
 
 
 
-
+<?php include('inc/footer.php'); ?>
 
 </body>
+</div>
 </html>
 
 
